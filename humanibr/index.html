@@ -22,25 +22,26 @@
             <hr>
             <h6> 
               <!-- <a href="https://pengsida.net/" target="_blank">Sida Peng</a><sup>1</sup>,  -->
-                Tiansong Zhou, 
-                <a href="https://ytrock.com/" target="_blank">Tao Yu</a><sup>2</sup>, 
-                Ruizhi Shao,
+                Tiansong Zhou<sup>1,2</sup>, 
+                <a href="https://ytrock.com/" target="_blank">Tao Yu</a><sup>1</sup>, 
+                Ruizhi Shao<sup>1</sup>,
                 <!-- <a href="http://www.cs.cornell.edu/~qqw/" target="_blank">Qianqian Wang</a><sup>3</sup>, -->
                 <!-- Qing Shuai<sup>1</sup>, -->
-                <a href="http://cic.tju.edu.cn/faculty/likun/" target="_blank">Kun Li</a><sup>1</sup></h6>
-            <!-- <p><sup>1</sup>State Key Lab of CAD & CG, Zhejiang University &nbsp;&nbsp;  -->
-                <!-- <sup>2</sup>The Chinese University of Hong Kong &nbsp;&nbsp; -->
+                <a href="http://cic.tju.edu.cn/faculty/likun/" target="_blank">Kun Li</a><sup>2</sup></h6>
+            <p><sup>1</sup>Tsinghua University &nbsp;&nbsp; 
+                <sup>2</sup>Tianjin University &nbsp;&nbsp;
                 <!-- <sup>3</sup>Cornell University</p> -->
-            <!-- <p> <a class="btn btn-secondary btn-lg" href="" role="button">Paper</a> 
-                <a class="btn btn-secondary btn-lg" href="" role="button">Code</a> 
-                <a class="btn btn-secondary btn-lg" href="" role="button">Data</a> </p> -->
+            <!-- <p> <a class="btn btn-secondary btn-lg" href="" role="button">Paper</a>  -->
+                <!-- <a class="btn btn-secondary btn-lg" href="" role="button">Code</a> 
+                <a class="btn btn-secondary btn-lg" href="" role="button">Data</a>  -->
+              <!-- </p> -->
 
-            <!-- <div class="row justify-content-center">
+            <div class="row justify-content-center">
               <div class="column">
-                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://arxiv.org/pdf/2012.15838.pdf" role="button"  target="_blank">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="" role="button"  target="_blank">
                     <i class="fa fa-file"></i> Paper</a> </p>
               </div>
-              <div class="column">
+              <!-- <div class="column">
                   <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/zju3dv/neuralbody" role="button"  target="_blank">
                     <i class="fa fa-github-alt"></i> Code</a> </p>
               </div>
@@ -51,8 +52,8 @@
               <div class="column">
                   <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/zju3dv/neuralbody/blob/master/supplementary_material.md" role="button"  target="_blank">
                     <i class="fa fa-file"></i> Supplementary</a> </p>
-              </div>
-            </div> -->
+              </div> -->
+            </div>
             
           </div>
         </div>
@@ -77,11 +78,13 @@
           <p class="text-left"> In this paper, we introduce HumanIBR, a method that addresses the challenge of novel view rendering of human performers that wear clothes with complex patterns using a sparse set of camera views. Some recent works have achieved remarkable rendering quality on humans that wear pure clothes using sparse views, but if the clothes have complex color patterns, the rendering quality is still very low. To this end, the proposed HumanIBR uses a human reconstruction net with pixel-aligned spatial transformer and a render net that uses geometry-guided pixel-wise feature integration to achieve to goal of high quality human reconstruction and rendering. The designed pixel-aligned spatial transformer calculates the correlations between the input views, producing human reconstruction results with high-frequency details presented in the input views. Based on the reconstruction, the geometry-guided pixel-wise visibility reasoning provides a guidance for multi-view feature integration, enabling the render net to render high quality images on novel views. Unlike previous neural rendering works that always need to train or fine-tune a separate network for each scene or human, our method is a general framework that is able to generalize to novel humans. Experiments show that our approach outperforms all the prior general or human-specific works on both synthetic data and real-world data. </p>
           <p> 
             <img src="assets/figure/recon_fig2.png", width="80%", style="float:middle"> 
-            <p width="80%"> Fig.1 Architecture of our reconstruction net. We use pixel-aligned spatial transformer for multi-view feature fusion, enabling us to preserve the 
-              geometry details that observed in the input images. </p>
+            <p> Fig.1 Architecture of our reconstruction net. We use <strong>pixel-aligned spatial transformer</strong> for multi-view feature fusion, enabling us to 
+              produce pixel-aligned highly detailed reconstruction results. </p>
          </p>
          <p>
             <img src="assets/figure/render_fig2.png", width="80%", stype="float:middle">
+            <p>Fig.2 Architecture of our render net. The geometry-guided pixel-wise feature integration enable us to solve the severe occlusions 
+              caused by the sparsity of input views, resulting in high quality rendering. </p>
          </p>
           
         </div>
@@ -113,22 +116,22 @@
         <div class="col-12 text-center">
             <h3>Resuls on Twindom dataset (Only 6 views as input)</h3>
             <hr style="margin-top:0px">
-            <video width="45%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+            <video width="49%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
                 <source src="assets/twindom_videos/badman/geo_img_video_down.mp4" type="video/mp4">
             </video>
-            <video width="45%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+            <video width="49%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
                 <source src="assets/twindom_videos/black/geo_img_video_down.mp4" type="video/mp4">
             </video>
-            <video width="45%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+            <video width="49%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
                <source src="assets/twindom_videos/yellow/geo_img_video_down.mp4" type="video/mp4">
             </video>
-            <video width="45%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+            <video width="49%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
                <source src="assets/twindom_videos/blackflower/geo_img_video_down.mp4" type="video/mp4">
             </video>
-            <video width="45%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+            <video width="49%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
               <source src="assets/twindom_videos/stand/geo_img_video_down.mp4" type="video/mp4">
            </video>
-           <video width="45%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+           <video width="49%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
             <source src="assets/twindom_videos/basketball/geo_img_video_down.mp4" type="video/mp4">
            </video>
             <!-- <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
@@ -183,19 +186,19 @@
         <div class="col-12 text-center">
             <h3>Results on real-world data (8 views as input) </h3>
             <hr style="margin-top:0px">
-            <video width="45%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+            <video width="49%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
                 <source src="assets/hangzhou_videos/zym0919_5301_5601/video.mp4" type="video/mp4">
             </video>
-            <video width="45%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+            <video width="49%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
               <source src="assets/hangzhou_videos/zym0920_3761_4061/video.mp4" type="video/mp4">
             </video>
-            <video width="45%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+            <video width="49%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
               <source src="assets/hangzhou_videos/zyx0919_3581_3881/video.mp4" type="video/mp4">
             </video>
-            <video width="45%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+            <video width="49%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
               <source src="assets/hangzhou_videos/zzr0919_901_1201/video.mp4" type="video/mp4">
             </video>
-            <video width="45%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+            <video width="49%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
               <source src="assets/hangzhou_videos/zzr0920_721_1300/video.mp4" type="video/mp4">
             </video>
             <!-- <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
