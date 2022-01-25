@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HumanIBR: High Quality Image-based Rendering of Challenging Human Performers using Sparse Views</title>
+    <title>HDhuman: High-quality Human Performance Capture with Sparse Views</title>
     <!-- Bootstrap -->
     <link href="bootstrap-4.4.1.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
@@ -17,7 +17,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h2>HumanIBR: High Quality Image-based Rendering of Challenging Human Performers using Sparse Views</h2>
+            <h2>HDhuman: High-quality Human Performance Capture with Sparse Views</h2>
             <h4 style="color:#5a6268;">arXiv 2022</h4>
             <hr>
             <h6> 
@@ -75,15 +75,16 @@
               </video> -->
               <!-- <br><br> -->
           <!-- <p class="text-left"> This paper addresses the challenge of novel view synthesis for a human performer from a very sparse set of camera views. Some recent works have shown that learning implicit neural representations of 3D scenes achieves remarkable view synthesis quality given dense input views. However, the representation learning will be ill-posed if the views are highly sparse. To solve this ill-posed problem, our key idea is to integrate observations over video frames. To this end, we propose Neural Body, a new human body representation which assumes that the learned neural representations at different frames share the same set of latent codes anchored to a deformable mesh, so that the observations across frames can be naturally integrated. The deformable mesh also provides geometric guidance for the network to learn 3D representations more efficiently. To evaluate our approach, we create a multi-view dataset named ZJU-MoCap that captures performers with complex motions. Experiments on ZJU-MoCap show that our approach outperforms prior works by a large margin in terms of novel view synthesis quality. We also demonstrate the capability of our approach to reconstruct a moving person from a monocular video on the People-Snapshot dataset. </p> -->
-          <p class="text-left"> In this paper, we introduce HumanIBR, a method that addresses the challenge of novel view rendering of human performers that wear clothes with complex patterns using a sparse set of camera views. Some recent works have achieved remarkable rendering quality on humans that wear pure clothes using sparse views, but if the clothes have complex color patterns, the rendering quality is still very low. To this end, the proposed HumanIBR uses a human reconstruction net with pixel-aligned spatial transformer and a render net that uses geometry-guided pixel-wise feature integration to achieve to goal of high quality human reconstruction and rendering. The designed pixel-aligned spatial transformer calculates the correlations between the input views, producing human reconstruction results with high-frequency details presented in the input views. Based on the reconstruction, the geometry-guided pixel-wise visibility reasoning provides a guidance for multi-view feature integration, enabling the render net to render high quality images on novel views. Unlike previous neural rendering works that always need to train or fine-tune a separate network for each scene or human, our method is a general framework that is able to generalize to novel humans. Experiments show that our approach outperforms all the prior general or human-specific works on both synthetic data and real-world data. </p>
+          <p class="text-left"> In this paper, we introduce HDhuman, a method that addresses the challenge of novel view rendering of human performers that wear clothes with complex texture patterns using a sparse set of camera views. Although some recent works have achieved remarkable rendering quality on humans with relatively uniform textures using sparse views, the rendering quality remains limited when dealing with complex texture patterns as they are unable to recover the high-frequency geometry details that observed in the input views.
+            To this end, the proposed HDhuman uses a human reconstruction network with a pixel-aligned spatial transformer and a rendering network that uses geometry-guided pixel-wise feature integration to achieve high-quality human reconstruction and rendering. The designed pixel-aligned spatial transformer calculates the correlations between the input views, producing human reconstruction results with high-frequency details. Based on the surface reconstruction results, the geometry-guided pixel-wise visibility reasoning provides guidance for multi-view feature integration, enabling the rendering network to render high-quality images at 2k resolution on novel views. Unlike previous neural rendering works that always need to train or fine-tune an independent network for a different scene, our method is a general framework that is able to generalize to novel subjects. Experiments show that our approach outperforms all the prior generic or specific methods on both synthetic data and real-world data. </p>
           <p> 
             <img src="assets/figure/recon_fig2.png", width="80%", style="float:middle"> 
-            <p> Fig.1 Architecture of our reconstruction net. We use <strong>pixel-aligned spatial transformer</strong> for multi-view feature fusion, enabling us to 
+            <p> Fig.1 Architecture of our reconstruction network. We use <strong>pixel-aligned spatial transformer</strong> for multi-view feature fusion, enabling us to 
               produce pixel-aligned highly detailed reconstruction results. </p>
          </p>
          <p>
-            <img src="assets/figure/render_fig2.png", width="80%", stype="float:middle">
-            <p>Fig.2 Architecture of our render net. The geometry-guided pixel-wise feature integration enable us to solve the severe occlusions 
+            <img src="assets/figure/render_fig3.png", width="80%", stype="float:middle">
+            <p>Fig.2 Architecture of our rendering network. The geometry-guided pixel-wise feature integration enable us to solve the severe occlusions 
               caused by the sparsity of input views, resulting in high quality rendering. </p>
          </p>
           
@@ -217,8 +218,8 @@
           <h3>Citation</h3>
           <hr style="margin-top:0px">
               <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
-<code>@misc{zhou2022humanibr,
-  title={HumanIBR: High Quality Image-based Rendering of Challenging Human Performers using Sparse Views}, 
+<code>@misc{zhou2022hdhuman,
+  title={HDhuman: High-quality Human Performance Capture with Sparse Views}, 
   author={Tiansong Zhou and Tao Yu and Ruizhi Shao and Kun Li},
   year={2022},
   eprint={2201.08158},
